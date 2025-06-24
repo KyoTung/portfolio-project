@@ -20,3 +20,6 @@
 .font-ovo{
   font-family: var(--Ovo);
 }
+.hover-bg-lighHover:hover {
+  background-color: var(--lighHover) !important;
+}

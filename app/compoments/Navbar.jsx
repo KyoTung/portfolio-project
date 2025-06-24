@@ -2,27 +2,42 @@
 import { assets } from "@/assets/assets";
 import Image from "next/image";
 import "../globals.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
+  const [isScroll, setIsCroll] = useState(false);
 
- console.log(isOpenMenu)
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (scrollY > 50) {
+        setIsCroll(true);
+      } else {
+        setIsCroll(false);
+      }
+    });
+  }, []);
   return (
     <>
       <div className="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]">
         <Image className="w-full" src={assets.header_bg_color} alt="" />
       </div>
       <nav
-        className="w-full fixed px-5 lg:px-8 xl:px-[8%] 
-      py-4 flex items-center justify-between z-50"
+        className={`w-full fixed px-5 lg:px-8 xl:px-[8%] 
+      py-4 flex items-center justify-between z-50 ${
+        isScroll ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm" : ""
+      }`}
       >
         <a href="#top">
           <span className="font-extrabold text-4xl cursor-pointer mr-14">
             Tung
           </span>
         </a>
-        <ul className="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50">
+        <ul
+          className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${
+            isScroll ? "" : " bg-white shadow-sm bg-opacity-50"
+          }`}
+        >
           <li>
             <a className="font-ovo" href="#top">
               Home
@@ -79,7 +94,11 @@ const Navbar = () => {
             className="absolute right-6 top-6 "
             onClick={() => setIsOpenMenu(!isOpenMenu)}
           >
-            <Image className="w-5 cursor-pointer" src={assets.close_black} />
+            <Image
+              className="w-5 cursor-pointer"
+              src={assets.close_black}
+              alt=""
+            />
           </div>
           <li onClick={() => setIsOpenMenu(!isOpenMenu)}>
             <a className="font-ovo" href="#top">

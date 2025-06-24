@@ -35,6 +35,11 @@ import right_arrow from './right-arrow.png';
 import send_icon from './send-icon.png';
 import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
+import tools from "./tools.png"
+import frontend from "./frontend.png"
+import backend from "./backend.png"
+import school from "./school.png"
+import bag from "./bag.png"
 
 export const assets = {
     user_image,
@@ -73,7 +78,12 @@ export const assets = {
     right_arrow,
     send_icon,
     right_arrow_bold,
-    right_arrow_bold_dark
+    right_arrow_bold_dark,
+    frontend,
+    backend,
+    tools,
+    bag, 
+    school
 };
 
 export const workData = [
@@ -105,11 +115,38 @@ export const serviceData = [
     { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
     { icon: assets.graphics_icon, title: 'Graphics design', description: 'Creative design solutions to enhance visual communication...', link: '' },
 ]
-
 export const infoList = [
-    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'HTML, CSS, JavaScript React Js, Next Js' },
-    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'B.Tech in Computer Science' },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 5 projects' }
+  {
+    icon: assets.frontend,
+    iconDark: assets.code_icon_dark,
+    title: "Front-end",
+    description: "HTML5/CSS3, JavaScript (ES6), React Js, Reponsive Design",
+  },
+  {
+    icon: assets.backend,
+    iconDark: assets.code_icon_dark,
+    title: "Back-end",
+    description: "PHP, Laravel, RESTful APIs, MySQL, Authentication (JWT)",
+  },
+  {
+    icon: assets.tools,
+    iconDark: assets.code_icon_dark,
+    title: "Tools & Methods",
+    description:
+      "Git/GitHub, PostMan, MVC Architecture, OOP, Agile Development",
+  },
+  {
+    icon: assets.school,
+    iconDark: assets.edu_icon_dark,
+    title: "Education",
+    description: "Bachelor’s degree in Computer Programming, BKACAD",
+  },
+  {
+    icon: assets.bag,
+    iconDark: assets.project_icon_dark,
+    title: "Projects",
+    description: "Built more than 5 projects",
+  },
 ];
 
 export const toolsData = [
