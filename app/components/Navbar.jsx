@@ -187,7 +187,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
               className={`font-ovo ${
                 isDarkMode ? "text-gray-200" : "text-gray-800"
               }`}
-              href="#work"
+              href="#projects"
             >
               My Work
             </a>
