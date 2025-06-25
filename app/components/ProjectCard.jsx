@@ -1,16 +1,22 @@
-"use-client";
+"use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project, isDarkMode }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       whileHover={{ y: -10 }}
-      className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 h-full flex flex-col"
+      className={`border rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 h-full flex flex-col
+        ${
+          isDarkMode
+            ? "bg-gray-900 border-gray-700"
+            : "bg-white border-gray-500"
+        }
+      `}
     >
       {/* Project Image */}
       <div className="relative h-48 overflow-hidden">
@@ -27,7 +33,11 @@ const ProjectCard = ({ project }) => {
       {/* Project Content */}
       <div className="p-6 flex-1 flex flex-col">
         <div className="flex justify-between items-start mb-3">
-          <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+          <h3
+            className={`text-xl font-bold ${
+              isDarkMode ? "text-white" : "text-gray-900"
+            }`}
+          >
             {project.title}
           </h3>
 
@@ -37,7 +47,11 @@ const ProjectCard = ({ project }) => {
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-700 dark:text-gray-300 hover:text-amber-600 dark:hover:text-amber-500 transition-colors"
+                className={`hover:text-amber-600 transition-colors ${
+                  isDarkMode
+                    ? "hover:text-amber-400 text-white"
+                    : "text-gray-900"
+                }`}
                 aria-label="GitHub repository"
               >
                 <FiGithub size={20} />
@@ -48,7 +62,11 @@ const ProjectCard = ({ project }) => {
                 href={project.demo}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-700 dark:text-gray-300 hover:text-amber-600 dark:hover:text-amber-500 transition-colors"
+                className={`hover:text-amber-600 transition-colors ${
+                  isDarkMode
+                    ? "hover:text-amber-400 text-white"
+                    : "text-gray-900"
+                }`}
                 aria-label="Live demo"
               >
                 <FiExternalLink size={20} />
@@ -57,7 +75,11 @@ const ProjectCard = ({ project }) => {
           </div>
         </div>
 
-        <p className="text-gray-600 dark:text-gray-300 mb-4 flex-1">
+        <p
+          className={`mb-4 flex-1 ${
+            isDarkMode ? "text-gray-300" : "text-gray-800"
+          }`}
+        >
           {project.description}
         </p>
 
@@ -66,7 +88,9 @@ const ProjectCard = ({ project }) => {
           {project.technologies.map((tech, index) => (
             <span
               key={index}
-              className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 text-sm rounded-full"
+              className={`px-3 py-1 text-white text-sm rounded-full
+                ${isDarkMode ? "bg-gray-700" : "bg-gray-800"}
+              `}
             >
               {tech}
             </span>

@@ -4,9 +4,6 @@
 @tailwind utilities;
 
 :root {
-  --lighHover: '#fcf4ff';
-  --darkHover: '#2a004a';
-  --darkTheme: '#11001F';
   --OutFit: 'Outfit', sans-serif;
   --Ovo: 'Ovo', 'serif';
 }
@@ -19,7 +16,4 @@
 }
 .font-ovo{
   font-family: var(--Ovo);
-}
-.hover-bg-lighHover:hover {
-  background-color: var(--lighHover) !important;
 }
