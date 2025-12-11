@@ -41,6 +41,7 @@ import school from "./school.png";
 import bag from "./bag.png";
 import project_img from "./project_img.png";
 import camera_store from "./camera_store.png";
+import neststore from "./neststore.png";
 
 export const assets = {
   user_image,
@@ -120,6 +121,15 @@ export const projects = [
     technologies: ["React", "Laravel", "MySQL", "JWT"],
     github: "https://github.com/KyoTung/Camera_store_frontend.git",
     demo: "https://camera-store-frontend-nu.vercel.app",
+  },
+  {
+    title: "E-commerce NesStore",
+    image: neststore,
+    description:
+      "Full-stack e-commerce platform with React frontend and Nodejs backend.",
+    technologies: ["React", "Nodejs", "MongoDB", "JWT"],
+    github: "https://github.com/KyoTung/E-Commerce-Frontend.git",
+    demo: "https://nest-store-commerce.vercel.app/",
   },
 ];
 export const infoList = [

@@ -58,7 +58,7 @@ const About = ({ isDarkMode }) => {
             {infoList.map(({ icon, iconDark, title, description }, index) => (
               <li
                 key={index}
-                className={`border-[0.5px] rounded-xl p-6 cursor-pointer group hover:bg-amber-600 hover:-translate-y-1 duration-500 ${
+                className={`border-[0.5px] rounded-xl p-6 w-36 cursor-pointer group hover:bg-amber-600 hover:-translate-y-1 duration-500 ${
                   isDarkMode
                     ? "border-gray-600 bg-gray-900"
                     : "border-gray-400 bg-white"
