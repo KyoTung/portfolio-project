@@ -126,7 +126,7 @@ export const projects = [
     title: "E-commerce NesStore",
     image: neststore,
     description:
-      "Full-stack e-commerce platform with React frontend and Nodejs backend.",
+      "Full-stack phone e-commerce platform with React frontend and Nodejs backend.",
     technologies: ["React", "Nodejs", "MongoDB", "JWT"],
     github: "https://github.com/KyoTung/E-Commerce-Frontend.git",
     demo: "https://nest-store-commerce.vercel.app/",
