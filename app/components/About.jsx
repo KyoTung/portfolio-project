@@ -1,19 +1,9 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { assets, infoList } from "@/assets/assets";
+import { assets, infoList } from "@/assets/assets"; 
 
 const About = ({ isDarkMode }) => {
-  const skills = [
-    "React.js",
-    "Laravel",
-    "JavaScript (ES6+)",
-    "PHP",
-    "MySQL",
-    "RESTful APIs",
-    "HTML5/CSS3",
-    "Git/GitHub",
-  ];
   return (
     <div
       id="about"
@@ -26,7 +16,7 @@ const About = ({ isDarkMode }) => {
           isDarkMode ? "text-gray-200" : "text-gray-700"
         }`}
       >
-        Introdution
+        Introduction
       </h4>
       <h2
         className={`text-center text-5xl font-Ovo ${
@@ -36,17 +26,20 @@ const About = ({ isDarkMode }) => {
         About me
       </h2>
 
-      <div className="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
-        <div className="w-64 sm:w-80 rounded-3xl max-2-none">
+      <div className="flex w-full flex-col lg:flex-row items-start gap-20 my-20">
+
+        <div className="w-64 sm:w-80 rounded-3xl max-w-none mx-auto lg:mx-0">
           <Image
             src={assets.user_image}
-            alt=""
+            alt="User"
             className="w-full rounded-3xl"
           />
         </div>
-        <div className="flex-1 ">
+
+ 
+        <div className="flex-1">
           <p
-            className={`mb-10 max-w-2xl font-Ovo ${
+            className={`mb-10 max-w-2xl font-Ovo text-center lg:text-left ${
               isDarkMode ? "text-gray-200" : "text-gray-800"
             }`}
           >
@@ -54,38 +47,39 @@ const About = ({ isDarkMode }) => {
             concepts into functional products. Seeking opportunities to innovate
             and grow in professional environments.
           </p>
-          <ul className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
+
+
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
             {infoList.map(({ icon, iconDark, title, description }, index) => (
               <li
                 key={index}
-                className={`border-[0.5px] rounded-xl p-6 w-36 cursor-pointer group hover:bg-amber-600 hover:-translate-y-1 duration-500 ${
+                className={`border-[0.5px] rounded-xl p-6 cursor-pointer group hover:bg-amber-600 hover:-translate-y-1 duration-500 flex flex-col items-start ${
                   isDarkMode
                     ? "border-gray-600 bg-gray-900"
                     : "border-gray-400 bg-white"
                 }`}
               >
                 <Image
-                  src={icon}
+                  src={isDarkMode ? iconDark : icon}
                   alt={title}
-                  className={`w-7 mt-3 group-hover:invert group-hover:brightness-200 ${
-                    isDarkMode ? "invert brightness-200" : ""
-                  }`}
+                  className="w-7 mt-3"
                 />
+
                 <h3
-                  className={`my-4 font-semibold group-hover:text-white ${
-                    isDarkMode ? "text-white" : ""
+                  className={`my-4 font-semibold text-lg group-hover:text-white ${
+                    isDarkMode ? "text-white" : "text-gray-900"
                   }`}
                 >
                   {title}
                 </h3>
+
                 <p
-                  className={`text-sm group-hover:text-white ${
-                    isDarkMode ? "text-gray-200" : ""
+                  className={`text-sm leading-6 group-hover:text-white ${
+                    isDarkMode ? "text-gray-300" : "text-gray-600"
                   }`}
                 >
                   {description}
                 </p>
-                <span className="group-hover:text-white">``</span>
               </li>
             ))}
           </ul>

@@ -42,6 +42,7 @@ import bag from "./bag.png";
 import project_img from "./project_img.png";
 import camera_store from "./camera_store.png";
 import neststore from "./neststore.png";
+import bookstore from "./bookstore.png";
 
 export const assets = {
   user_image,
@@ -130,27 +131,39 @@ export const projects = [
     technologies: ["React", "Nodejs", "MongoDB", "JWT"],
     github: "https://github.com/KyoTung/E-Commerce-Frontend.git",
     demo: "https://nest-store-commerce.vercel.app/",
+
   },
+  {
+    title: "E-commerce BookStore",
+    image: bookstore,
+    description:
+      "Online bookstore built with .NET, Blazor, MySQL, and Bootstrap.",
+    technologies: [".NET", "Blazor", "MySQL", "Boostrap"],
+    github: "https://github.com/KyoTung/BookStoreCsharpBlazor.git",
+    demo: "",
+
+  },
+  
 ];
+
 export const infoList = [
   {
     icon: assets.frontend,
     iconDark: assets.code_icon_dark,
     title: "Front-end",
-    description: "HTML5/CSS3, JavaScript (ES6), React Js, Reponsive Design",
+    description: "ReactJS, Redux Toolkit, Ant Design, JavaScript (ES6+), HTML5/CSS3, Responsive UI",
   },
   {
     icon: assets.backend,
     iconDark: assets.code_icon_dark,
     title: "Back-end",
-    description: "PHP, Laravel, RESTful APIs, MySQL, Authentication (JWT)",
+    description: "Node.js (Express), MongoDB, MySQL, RESTful APIs, JWT Authentication",
   },
   {
     icon: assets.tools,
     iconDark: assets.code_icon_dark,
     title: "Tools & Methods",
-    description:
-      "Git/GitHub, PostMan, MVC Architecture, OOP, Agile Development",
+    description: "Git/GitHub, Postman, MVC Architecture, OOP, Agile/Scrum",
   },
   {
     icon: assets.school,
@@ -161,7 +174,7 @@ export const infoList = [
   {
     icon: assets.bag,
     iconDark: assets.project_icon_dark,
-    title: "Projects",
-    description: "Built more than 5 projects",
+    title: "Experience", 
+    description: "Delivered 10+ client projects & 5+ personal full-stack applications",
   },
 ];
