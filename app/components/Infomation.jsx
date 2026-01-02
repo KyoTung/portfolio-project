@@ -33,7 +33,7 @@ const Infomation = ({ isDarkMode }) => {
         }`}
       >
         Computer Science student specializing in modern web development.
-        Equipped with practical experience building React and Laravel
+        Equipped with practical experience building ReactJS and NodeJS
         applications, I transform ideas into functional solutions. Eager to
         contribute technical skills and embrace new challenges in professional
         settings.
