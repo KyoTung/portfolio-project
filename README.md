@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Personal Portfolio Website
+Overview
+This is a personal portfolio website designed to showcase my skills, projects, certifications, and contact information. The site is fully responsive, SEO-friendly, and optimized for performance. It serves as a central hub for recruiters and collaborators to explore my work and reach out easily.
 
-## Getting Started
+Key Features
 
-First, run the development server:
+Responsive Design: Works seamlessly across desktop, tablet, and mobile devices.
+Modern Tech Stack: Built with Next.js and Tailwind CSS for fast rendering and clean UI.
+SEO Optimization: Includes meta tags, Open Graph, and sitemap for better visibility.
+Project Showcase: Highlights major projects with descriptions, tech stack, and links to GitHub/demo.
+Contact Section: Easy-to-use contact form and social links.
+Deployment: Hosted on Vercel for high performance and global CDN.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Tech Stack
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Frontend: Next.js, React, Tailwind CSS
+Deployment: Vercel
+Tools: Git, GitHub, ESLint, Prettier
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+Live Demo
+Portfolio Website
 
-To learn more about Next.js, take a look at the following resources:
+Screenshots
+(Add screenshots of Home, Projects, and Contact sections here)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Installation
+To run this project locally:
+Shell# Clone the repositorygit clone https://github.com/KyoTung/portfolio-project.git# Navigate to the project folder cd portfolio-project
+The app will run on http://localhost:3000.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Folder Structure
+portfolio-project/
+├── components/      # Reusable UI components
+├── pages/           # Next.js pages (Home, Projects, Contact)
+├── public/          # Static assets (images, icons)
+├── styles/          # Global styles
+└── ...
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Future Improvements
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Add Blog section for technical articles.
+Integrate GitHub API to display real-time repo stats.
+Add Dark Mode toggle.
+Implement Web Analytics for visitor tracking.
+
+
+Contact
+
+Email: hoangthanhtung.ac1@gmail.com
+GitHub: KyoTung
+Portfolio: Live Site
+
+
+✅ This README is recruiter-friendly, highlights your tech stack, and makes the repo look professional.
