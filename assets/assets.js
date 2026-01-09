@@ -130,8 +130,7 @@ export const projects = [
       "Full-stack phone e-commerce platform with React frontend and Nodejs backend.",
     technologies: ["React", "Nodejs", "MongoDB", "JWT"],
     github: "https://github.com/KyoTung/E-Commerce-Frontend.git",
-    demo: "https://nest-store-commerce.vercel.app/",
-
+    demo: "https://neststore-beta.vercel.app",
   },
   {
     title: "E-commerce BookStore",
