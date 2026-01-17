@@ -53,7 +53,7 @@ const Infomation = ({ isDarkMode }) => {
           <Image src={assets.right_arrow_white} className="w-4" alt="" />
         </a>
         <a
-          href="/cv.pdf"
+          href="https://drive.google.com/file/d/1mX0Ynoxru-Efg4sUoTNMvN2a_SIvVbfB/view?usp=sharing"
           download
           className={`px-10 py-3 border rounded-full flex items-center gap-2
             ${
@@ -64,7 +64,7 @@ const Infomation = ({ isDarkMode }) => {
           hover:bg-amber-600`}
         >
           My resume
-          <Image src={assets.download_icon} className="w-4" alt="" />
+         <Image src={assets.right_arrow_white} className="w-4" alt="" />
         </a>
       </div>
     </div>
